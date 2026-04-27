@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        :root {
+            --textile-gold: #a67c52;
+            --weaving-charcoal: #3d3d3d;
+            --linen-white: #ffffff;
+        }
+
+        .cta-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+            background-color: #f9f7f2;
+            /* Soft fabric background */
+        }
+
+        .forgot-card {
+            background: var(--linen-white);
+            max-width: 400px;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+            border: 1px solid #e0dcd0;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .forgot-card h2 {
+            font-family: 'Georgia', serif;
+            color: var(--weaving-charcoal);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .forgot-card p {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .forgot-card input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .forgot-card input:focus {
+            outline: none;
+            border-color: var(--textile-gold);
+        }
+
+        .btn-reset {
+            background: var(--weaving-charcoal);
+            color: white;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .btn-reset:hover {
+            background: var(--textile-gold);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: var(--textile-gold);
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cta-container">
+        <div class="forgot-card">
+            <h2>Reset Password</h2>
+            <p>Enter the email associated with your textile account, and we'll send a recovery link to your loom.</p>
+
+            <form action="/request-reset" method="POST">
+                <input type="email" name="email" placeholder="Your Email Address" required>
+                <button type="submit" class="btn-reset">Send Reset Link</button>
+            </form>
+
+            <a href="/login" class="back-link">← Back to Login</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
